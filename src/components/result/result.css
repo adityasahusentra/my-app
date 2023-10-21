@@ -1,0 +1,68 @@
+/* ResultScreen.css */
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+  }
+  
+  .background-confetti {
+    background-image: url(''); /* Replace with the path to your confetti image */
+    width: 100%;
+    height: 100px; /* Adjust the height of the confetti pattern */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .gauge-container {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .gauge {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ecf0f1;
+    position: relative;
+  }
+  
+  .needle {
+    width: 4px;
+    height: 50px;
+    background-color: #e74c3c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%) translateY(-100%) rotate(0deg);
+    transition: transform 1s cubic-bezier(0.4, 2.4, 0.6, 1.4);
+  }
+  
+  .result-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .restart-button {
+    background-color: #ff6f61;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .restart-button:hover {
+    background-color: #ff4438;
+  }
+  
