@@ -12,7 +12,7 @@ const ResultScreen = ({ correctAnswers, incorrectAnswers, onRestartClick }) => {
 
   return (
     <div className="result-container">
-      <div className="result-box">
+      <div className="result-box position-relative">
         <div className="result-text">Your Result</div>
         <div className="result-meter"></div>
         <div className="correct-incorrect">
@@ -28,8 +28,8 @@ const ResultScreen = ({ correctAnswers, incorrectAnswers, onRestartClick }) => {
           </div>
         </div>
 
-        <div className="r-btn-wrapper d-flex justify-content-center">
-          <Link className="restart-btn" to="/">
+        <div className="r-btn-wrapper w-100 position-absolute bottom-0 start-0 mb-4">
+          <Link className="r-btn" to="/">
             Start Again
           </Link>
         </div>
