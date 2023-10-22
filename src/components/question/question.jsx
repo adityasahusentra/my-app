@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./question.css"; // Import the CSS file for styling
 
+import {
+  CircularProgressbar,
+  CircularProgressbarWithChildren,
+  buildStyles,
+} from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+
 const QuestionScreen = () => {
   const [state, setState] = useState({
     questions: [],
@@ -83,6 +90,20 @@ const QuestionScreen = () => {
   return !state.isFetching ? (
     <div className="question-container">
       <div className="question-box position-relative">
+        <div className="progress-circle w-100 d-flex justify-content-center position-absolute top-0 start-50 translate-middle">
+        <CircularProgressbar
+        value={20}
+        text={"1/3"}
+        background
+        backgroundPadding={6}
+        styles={buildStyles({
+          backgroundColor: "#fff",
+          textColor: "#000",
+          pathColor: "#44B77B",
+          trailColor: "#F3F4FA"
+        })}
+      />
+        </div>
         <div className="question-text">
           {state.questions[state.currentQuestionIndex]?.text}
         </div>

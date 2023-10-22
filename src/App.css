@@ -9,6 +9,7 @@
 body{
   max-width: 30rem;
   margin: auto;
+  background-color: rgb(245, 245, 245);
 }
 
 .button-wrapper{
