@@ -2,6 +2,8 @@
   --questionBg: #AF9CF3;
   --buttonBg: #FF3B3F;
   --optionBg: #F3F4FA;
+  --correctDot: #44B77B;
+  --incorrectDot: #FF3B3F;
 }
 
 body{
