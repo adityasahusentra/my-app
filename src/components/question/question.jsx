@@ -92,8 +92,8 @@ const QuestionScreen = () => {
       <div className="question-box position-relative">
         <div className="progress-circle w-100 d-flex justify-content-center position-absolute top-0 start-50 translate-middle">
         <CircularProgressbar
-        value={20}
-        text={"1/3"}
+        value={`${((state.currentQuestionIndex+1)/state.questions.length)*100}`}
+        text={`${state.currentQuestionIndex+1}/${state.questions.length}`}
         background
         backgroundPadding={6}
         styles={buildStyles({
