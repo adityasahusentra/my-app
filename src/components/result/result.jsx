@@ -3,7 +3,6 @@ import "./result.css"; // Import the CSS file for styling
 import { Link } from "react-router-dom";
 import {
   CircularProgressbar,
-  CircularProgressbarWithChildren,
   buildStyles,
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
