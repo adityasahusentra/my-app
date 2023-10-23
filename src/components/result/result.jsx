@@ -1,6 +1,12 @@
 import React from "react";
 import "./result.css"; // Import the CSS file for styling
 import { Link } from "react-router-dom";
+import {
+  CircularProgressbar,
+  CircularProgressbarWithChildren,
+  buildStyles,
+} from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 const ResultScreen = ({ correctAnswers, incorrectAnswers, onRestartClick }) => {
   const calculatePercentage = () => {
@@ -14,6 +20,18 @@ const ResultScreen = ({ correctAnswers, incorrectAnswers, onRestartClick }) => {
     <div className="result-container">
       <div className="result-box position-relative">
         <div className="result-text">Your Result</div>
+        <div className="result-circle w-100 d-flex justify-content-center my-5">
+          <CircularProgressbar
+            value={60}
+            text={`60%`}
+            circleRatio={0.75}
+            styles={buildStyles({
+              rotation: 1 / 2 + 1 / 8,
+              strokeLinecap: "butt",
+              trailColor: "#eee",
+            })}
+          />
+        </div>
         <div className="result-meter"></div>
         <div className="correct-incorrect">
           <div className="correct-item d-flex align-items-center px-3 py-4">

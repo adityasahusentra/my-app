@@ -1,6 +1,7 @@
 /* ResultScreen.css */
 
 .result-container {
+  background: url(../../background.svg);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -112,5 +113,10 @@
   height: 1rem;
   border-radius: 50%;
   background-color: var(--incorrectDot);
+}
+
+.result-circle {
+  height: 10rem;
+  width: 10rem;
 }
 
