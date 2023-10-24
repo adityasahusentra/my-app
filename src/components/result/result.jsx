@@ -15,6 +15,15 @@ const ResultScreen = () => {
 
   const { globalState, updateGlobalState } = useGlobalState();
 
+  function getColor(value) {
+    if (value > 0 && value <= 35) {
+      return "red";
+    } else if (value > 35 && value <= 70) {
+      return "yellow";
+    }
+    return "green";
+  }
+
   useEffect(() => {
     let isMounted = true;
 
@@ -73,9 +82,11 @@ const ResultScreen = () => {
             text={`${state.score}%`}
             circleRatio={0.75}
             styles={buildStyles({
+              textColor: "black",
               rotation: 1 / 2 + 1 / 8,
               strokeLinecap: "butt",
               trailColor: "#eee",
+              pathColor: `${getColor(state.score)}`
             })}
           />
         </div>
