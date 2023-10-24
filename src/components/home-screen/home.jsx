@@ -2,6 +2,7 @@ import React from "react";
 import "./home.css"; // Import the CSS file for styling
 import Vector from "../../Vector.svg";
 import { useNavigate } from "react-router-dom";
+import { useGlobalState } from "../../store";
 
 const HomeScreen = () => {
   const newQuizSession = {
@@ -9,6 +10,8 @@ const HomeScreen = () => {
     current_question_id: 1,
     start_time: Date.now(),
   };
+
+  const { globalState, updateGlobalState } = useGlobalState();
 
   const navigate = useNavigate();
 
@@ -22,14 +25,15 @@ const HomeScreen = () => {
     });
   };
 
-  const startQuiz = ()=>{
+  const startQuiz = () => {
     startSession()
-    .then(res => res.json())
-    .then(data => {
-      console.log("data", data);
-      navigate("/question");
-    });
-  }
+      .then((res) => res.json())
+      .then((data) => {
+        //todo save session id
+        updateGlobalState(data);
+        navigate("/question");
+      });
+  };
 
   return (
     <div className="home-container">

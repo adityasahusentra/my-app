@@ -79,7 +79,43 @@
       "id": 1,
       "quiz_id": 1,
       "current_question_id": 1,
-      "start_time": "2023-10-23T10:00:00Z"
+      "start_time": 1698077736135
+    },
+    {
+      "quiz_id": 1,
+      "current_question_id": 1,
+      "start_time": 1698077736135,
+      "id": 2
+    },
+    {
+      "quiz_id": 1,
+      "current_question_id": 1,
+      "start_time": 1698117575953,
+      "id": 3
+    },
+    {
+      "quiz_id": 1,
+      "current_question_id": 1,
+      "start_time": 1698127970849,
+      "id": 4
+    },
+    {
+      "quiz_id": 1,
+      "current_question_id": 1,
+      "start_time": 1698127994617,
+      "id": 5
+    },
+    {
+      "quiz_id": 1,
+      "current_question_id": 1,
+      "start_time": 1698128892855,
+      "id": 6
+    },
+    {
+      "quiz_id": 1,
+      "current_question_id": 1,
+      "start_time": 1698129017843,
+      "id": 7
     }
   ],
   "user_responses": [
@@ -87,9 +123,155 @@
       "id": 1,
       "session_id": 1,
       "question_id": 1,
-      "selected_options": ["Paris"],
+      "selected_options": [
+        "Paris"
+      ],
+      "is_answer_correct": true,
       "response_time": 15000,
       "created_at": "2023-10-23T10:15:00Z"
+    },
+    {
+      "session_id": 1,
+      "question_id": 1,
+      "selected_options": [
+        "Paris"
+      ],
+      "response_time": 8.418,
+      "created_at": 1698117884003,
+      "is_answer_correct": true,
+      "id": 2
+    },
+    {
+      "session_id": 1,
+      "question_id": 2,
+      "selected_options": [
+        "Delhi"
+      ],
+      "response_time": 6.832,
+      "created_at": 1698117890847,
+      "is_answer_correct": true,
+      "id": 3
+    },
+    {
+      "session_id": 1,
+      "question_id": 3,
+      "selected_options": [
+        "Cat"
+      ],
+      "response_time": 5.531,
+      "created_at": 1698117896392,
+      "is_answer_correct": false,
+      "id": 4
+    },
+    {
+      "session_id": 1,
+      "question_id": 1,
+      "selected_options": [
+        "Paris"
+      ],
+      "response_time": 10.896,
+      "created_at": 1698127987495,
+      "is_answer_correct": true,
+      "id": 5
+    },
+    {
+      "session_id": 1,
+      "question_id": 2,
+      "selected_options": [
+        "New York"
+      ],
+      "response_time": 1.74,
+      "created_at": 1698127989256,
+      "is_answer_correct": false,
+      "id": 6
+    },
+    {
+      "session_id": 1,
+      "question_id": 3,
+      "selected_options": [
+        "Lion"
+      ],
+      "response_time": 2.697,
+      "created_at": 1698127991966,
+      "is_answer_correct": false,
+      "id": 7
+    },
+    {
+      "session_id": 1,
+      "question_id": 1,
+      "selected_options": [
+        "Paris"
+      ],
+      "response_time": 59.217,
+      "created_at": 1698128777919,
+      "is_answer_correct": true,
+      "id": 8
+    },
+    {
+      "session_id": 6,
+      "question_id": 1,
+      "selected_options": [
+        "Paris"
+      ],
+      "response_time": 9.858,
+      "created_at": 1698128910960,
+      "is_answer_correct": true,
+      "id": 9
+    },
+    {
+      "session_id": 6,
+      "question_id": 2,
+      "selected_options": [
+        "Delhi"
+      ],
+      "response_time": 8.898,
+      "created_at": 1698128919872,
+      "is_answer_correct": true,
+      "id": 10
+    },
+    {
+      "session_id": 6,
+      "question_id": 3,
+      "selected_options": [
+        "Cat"
+      ],
+      "response_time": 2.685,
+      "created_at": 1698128922584,
+      "is_answer_correct": false,
+      "id": 11
+    },
+    {
+      "session_id": 7,
+      "question_id": 1,
+      "selected_options": [
+        "London"
+      ],
+      "response_time": 2.41,
+      "created_at": 1698129025119,
+      "is_answer_correct": false,
+      "id": 12
+    },
+    {
+      "session_id": 7,
+      "question_id": 2,
+      "selected_options": [
+        "New York"
+      ],
+      "response_time": 1.505,
+      "created_at": 1698129026640,
+      "is_answer_correct": false,
+      "id": 13
+    },
+    {
+      "session_id": 7,
+      "question_id": 3,
+      "selected_options": [
+        "Cat"
+      ],
+      "response_time": 1.767,
+      "created_at": 1698129028417,
+      "is_answer_correct": false,
+      "id": 14
     }
   ]
 }

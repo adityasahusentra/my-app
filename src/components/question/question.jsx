@@ -4,6 +4,7 @@ import "./question.css"; // Import the CSS file for styling
 
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { useGlobalState } from "../../store";
 
 const QuestionScreen = () => {
   const [state, setState] = useState({
@@ -14,6 +15,8 @@ const QuestionScreen = () => {
     isFetching: true,
     startTime: 0,
   });
+
+  const { globalState, updateGlobalState } = useGlobalState();
 
   let [nextDisabled, setDisabled] = useState(true);
 
@@ -79,12 +82,22 @@ const QuestionScreen = () => {
     const selectedOptions = state.currentOptions
       .filter((el) => el.selected)
       ?.map((el) => el.text);
+
+    const correctAnswers = selectedOptions.filter((el) =>
+      state.questions[state.currentQuestionIndex].correct_answer.includes(el)
+    );
+
+    const is_response_correct =
+      correctAnswers.length === selectedOptions.length;
+
     const userResponsePayload = {
       session_id: 1,
       question_id: state.questions[state.currentQuestionIndex].id,
       selected_options: selectedOptions,
       response_time: getDurationInSec(),
       created_at: Date.now(),
+      is_answer_correct: is_response_correct,
+      session_id: globalState.id,
     };
 
     return fetch("http://localhost:5000/user_responses", {
@@ -130,8 +143,8 @@ const QuestionScreen = () => {
     );
     optionToChange.selected = !optionToChange.selected;
     event.target.classList.toggle("checked-option");
-    setDisabled(!(state.currentOptions.filter(el => el.selected)?.length));
-  
+    setDisabled(!state.currentOptions.filter((el) => el.selected)?.length);
+
     setState((prevState) => ({
       ...prevState,
       currentOptions: modifiedCurrentOptions,
